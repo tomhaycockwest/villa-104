@@ -14,7 +14,7 @@
 /* Heading */
 h1{
 	font-family: 'oswald', sans-serif;
-	font-size:3.8em;
+	font-size:2.5em;
 	letter-spacing:.15em;
 	font-weight:700;
 	margin-bottom:10px;
@@ -30,13 +30,16 @@ h2{
 
 /* Sub Heading at the top */
 h3{
-	font-family: 'open sans', sans-serif;
-	font-size: .92em;
-	letter-spacing: .2em;
+	font-family: 'oswald', sans-serif;
+	font-size: 1.5em;
 	color:#F3F3F3;
 	max-width: 850px;
     margin: 0 auto;
 }
+
+.sub-heading {
+	font-size: 2em;
+} 
 
 /* Email and phone number */
 h4{
@@ -84,6 +87,22 @@ p{
 	padding-bottom:30px;
 }
 
+.resort,
+.enquire {
+	text-align: left;
+	color: black;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.enquire {
+	margin-top: 20px;
+}
+
+.villa {
+	margin-top: 50px;
+}
+
 #heading{
 	padding-top:10px;
 	padding-bottom:10px;
@@ -99,13 +118,12 @@ p{
 
 .text-field{
 	padding-top:10px;
-	width:100%;
-	max-width:700px;
+	width:84%;
+	max-width:900px;
 	text-align:justify;
 	text-align: center;
-	margin-left: 50%;
-	left: -350px;
 	position: relative;
+	margin: 0 auto;
 }
 
 .sub-text-field{
@@ -150,6 +168,15 @@ p{
 	fill:#10a8b5;
 }
 
+.map-overlay {
+   background:transparent; 
+   position:relative; 
+   width:900px;
+   height:400px; /* your iframe height */
+   top:400px;  /* your iframe height */
+   margin-top:-400px;  /* your iframe height */
+}
+
 nav{
 	float:right;
 	position:absolute;
@@ -162,7 +189,7 @@ nav ul{
 
 nav ul li{
 	float: left;
-	padding-left: 40px;
+	padding-left: 30px;
 	list-style: none;
 }
 
@@ -174,7 +201,8 @@ nav ul li a{
 	text-transform: capitalize;
 }
 
-#about{
+#about,
+#location {
 	width:100%;
 	background-color:white;
 	text-align:center;
@@ -182,7 +210,8 @@ nav ul li a{
 	padding-bottom:96px;
 }
 
-#gallery{
+#gallery,
+#enquire {
 	width:100%;
 	background-color:#e7ecf0;
 	text-align:center;
@@ -207,8 +236,9 @@ nav ul li a{
 
 .gallery-img{
 	float:left;
-	opacity:.7;
-	-moz-transition:.4s;
+	-webkit-filter: brightness(0.9);
+	filter: brightness(0.9);
+	-moz-transition: .4s;
     -webkit-transition:.4s;
     -o-transition: .4s;
     transition: .4s;
@@ -216,29 +246,31 @@ nav ul li a{
 
 .gallery-img:hover{
 	float:left;
-	opacity:.99;
+	-webkit-filter: brightness(1.1);
+}
+
+iframe {
+	width: 95%;
 }
 
 #contact-container{
-	float:left;
 	width:100%;
 	background-color:#b0b7bd;
 }
 
 #contact{
-	float:left;
+	margin: 0 auto;
 	position:relative;
-	margin-left:50%;
-	left: -215px;
 	background-color:#b0b7bd;
 	padding-top:15px;
 	padding-bottom:15px;
+	text-align: center;
+	padding-right: 20px;
 }
 
 #email{
-	width:270px;
-	float:left;
-	text-align:left;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #email h4, #phone h4{
@@ -246,9 +278,9 @@ nav ul li a{
 }
 
 #phone{
-	width:160px;
-	text-align:left;
-	float:left;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 20px;
 }
 
 .icon{
@@ -293,9 +325,9 @@ nav ul li a{
 		width: 84%;
 		margin-left: 8%;
 		margin-right: 8%;
-		
 		left: 0;
 	}
+
 }
 
 @media only screen and (max-width: 550px) {
