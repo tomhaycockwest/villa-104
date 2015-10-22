@@ -76,5 +76,10 @@ $(document).ready( function() {
       });
       
     });
+
+
+  var coverHeight = $('.cover').height();
+  $('.overlay').height(coverHeight);
+
     
 });
