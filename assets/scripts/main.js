@@ -78,8 +78,15 @@ $(document).ready( function() {
     });
 
 
-  var coverHeight = $('.cover').height();
+
+  var mapWidth = $('.map').width();
+  $('.map-overlay').width(mapWidth);
+
+  $("#top").backstretch("/assets/img/cover.jpg");
+  var coverHeight = $('.backstretch').height();
   $('.overlay').height(coverHeight);
+
+
 
     
 });
